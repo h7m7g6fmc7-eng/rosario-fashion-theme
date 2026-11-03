@@ -416,3 +416,110 @@ body, .rf-section { background: var(--rf-white); }
 .product-form__submit { background: var(--rf-black); }
 .product-form__submit:hover { background: var(--rf-red); }
 .product .price--on-sale .price-item--regular { color: var(--rf-grey); }
+
+/* ==========================================================
+   Paleta v3 — toda la tienda: crema de fondo, bandas rosas,
+   acciones en rojo, marco y texto en negro, vino para el logo.
+   ========================================================== */
+:root { --rf-cream: #FFF9F7; --rf-blush: #FBEEF0; --rf-rose: #F6DDE2; }
+body, .rf-section, .gradient { background-color: var(--rf-cream); }
+
+/* Botones: rojo = acción; negro al pasar el mouse */
+.rf-btn { background: var(--rf-red); border-color: var(--rf-red); color: var(--rf-white); }
+.rf-btn:hover { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.rf-btn--outline { background: transparent; color: var(--rf-black); border-color: var(--rf-black); }
+.rf-btn--outline:hover { background: var(--rf-black); color: var(--rf-white); }
+.rf-btn--light { background: var(--rf-cream); color: var(--rf-black); border-color: var(--rf-cream); }
+.rf-btn--light:hover { background: var(--rf-red); border-color: var(--rf-red); color: var(--rf-white); }
+.button:not(.button--secondary):not(.button--tertiary):hover { --color-button: 20, 20, 20; }
+
+/* Header crema + barra de categorías rosa */
+.header-wrapper, .header { background: var(--rf-cream); }
+.rf-catnav-section { background: var(--rf-rose); border-bottom: 0; }
+.rf-catnav__list { padding-top: 1rem; padding-bottom: 1rem; }
+.rf-catnav__link { color: var(--rf-black); }
+.rf-catnav__link:hover, .rf-catnav__link.is-active { color: var(--rf-red); text-decoration-color: var(--rf-red); }
+@media screen and (max-width: 749px) {
+  .rf-catnav__link { background: var(--rf-cream); border-color: transparent; }
+  .rf-catnav__link.is-active { background: var(--rf-black); color: var(--rf-white); }
+}
+.announcement-bar__link svg, .announcement-bar__message .icon { color: #FF6B81; }
+
+/* Hero */
+.rf-hero .rf-btn--outline { color: var(--rf-cream); border-color: var(--rf-cream); }
+.rf-hero .rf-btn--outline:hover { background: var(--rf-cream); color: var(--rf-black); }
+
+/* Comprar por ocasión: franja de color bajo cada foto */
+.rf-tile__label { padding: 1.6rem 2rem; }
+.rf-occasions__grid .rf-tile:nth-child(4n+1) .rf-tile__label { background: var(--rf-black); color: var(--rf-white); }
+.rf-occasions__grid .rf-tile:nth-child(4n+2) .rf-tile__label { background: var(--rf-red); color: var(--rf-white); }
+.rf-occasions__grid .rf-tile:nth-child(4n+3) .rf-tile__label { background: var(--rf-rose); color: var(--rf-black); }
+.rf-occasions__grid .rf-tile:nth-child(4n+4) .rf-tile__label { background: var(--rf-wine); color: var(--rf-white); }
+.rf-occasions__grid .rf-tile .rf-link-caps { color: inherit; }
+.rf-tile:hover .rf-link-caps { text-decoration: underline; color: inherit; }
+@media screen and (max-width: 749px) { .rf-tile__label { padding: 1.2rem; } }
+
+/* New In sobre rosa claro */
+.rf-new-in { background: var(--rf-blush); margin-top: 4rem; }
+.rf-filter { background: var(--rf-cream); border-color: transparent; }
+.rf-filter:hover { border-color: var(--rf-black); }
+.rf-filter.is-active { background: var(--rf-black); color: var(--rf-white); }
+.rf-card__media { background: var(--rf-white); }
+.rf-badge { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.rf-badge--wine { background: var(--rf-red); border-color: var(--rf-red); }
+.rf-new-in .rf-btn--outline { background: var(--rf-cream); }
+.rf-new-in .rf-btn--outline:hover { background: var(--rf-black); }
+
+/* Bolsas y joyería sobre rosa */
+.rf-section:has(.rf-split) { background: var(--rf-rose); }
+.rf-split .rf-eyebrow { color: var(--rf-black); }
+.rf-split .rf-h2 { color: var(--rf-wine); }
+
+/* Beneficios en negro */
+.rf-benefits { background: var(--rf-black); border: 0; }
+.rf-benefit__title { color: var(--rf-white); }
+.rf-benefit__text { color: var(--rf-rose); }
+
+/* Why Rosario sobre crema */
+.rf-promise { background: var(--rf-cream); }
+
+/* Newsletter en rojo */
+.rf-newsletter { background: var(--rf-red); }
+.rf-newsletter .rf-eyebrow, .rf-newsletter .rf-h2, .rf-newsletter .rf-lead, .rf-newsletter__ok { color: var(--rf-white); }
+.rf-newsletter__field { border-bottom-color: var(--rf-white); }
+.rf-newsletter__field input { color: var(--rf-white); }
+.rf-newsletter__field input::placeholder { color: #FFD9DF; }
+.rf-newsletter__field input:focus { outline-color: var(--rf-white); }
+.rf-newsletter .rf-btn { background: var(--rf-black); border-color: var(--rf-black); }
+.rf-newsletter .rf-btn:hover { background: var(--rf-cream); border-color: var(--rf-cream); color: var(--rf-red); }
+.rf-newsletter__error { color: var(--rf-white); }
+@media screen and (max-width: 749px) { .rf-newsletter__field input { border-bottom-color: var(--rf-white); } }
+
+/* ---------- Colecciones y búsqueda: banda rosa ---------- */
+.collection-hero { background: var(--rf-rose); padding: 4.8rem 0 4rem; margin-bottom: 3.2rem; }
+.collection-hero__description { color: var(--rf-black); }
+.template-search__header { background: var(--rf-rose); max-width: none; padding: 4.8rem 1.6rem 4rem; margin-bottom: 3.2rem; text-align: center; }
+.template-search__header .search { max-width: 56rem; margin: 2rem auto 0; }
+.card__media, .card .media { background: var(--rf-white); }
+.card-wrapper:hover .card__heading { color: var(--rf-red); }
+.facets__summary:hover, .facet-checkbox:hover { color: var(--rf-red); }
+
+/* ---------- Ficha de producto ---------- */
+.product .price .price-item--sale, .product .price--on-sale .price-item--last { color: var(--rf-red); }
+.product-form__input input[type='radio']:checked + label { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.product-form__submit { background: var(--rf-red); color: var(--rf-white); }
+.product-form__submit:hover { background: var(--rf-black); }
+.product__accordion, .product .accordion { border-color: var(--rf-line); }
+.product__accordion summary, .product .accordion summary { letter-spacing: .14em; text-transform: uppercase; font-size: 1.2rem; }
+.related-products .title, .related-products h2 { font-family: var(--rf-display); color: var(--rf-black); }
+
+/* ---------- Carrito: crema con encabezado rosa y pago en rojo ---------- */
+.cart-drawer .drawer__inner, .cart-drawer .drawer__inner-empty { background: var(--rf-cream); }
+.cart-drawer .drawer__header { background: var(--rf-rose); margin: 0 -1.5rem; padding: 2rem 1.5rem 1.6rem; border-bottom: 0; }
+.cart-drawer .drawer__footer { background: var(--rf-cream); }
+#CartDrawer-Checkout, .cart__checkout-button { background: var(--rf-red); color: var(--rf-white); }
+#CartDrawer-Checkout:hover, .cart__checkout-button:hover { background: var(--rf-black); }
+.cart__footer .cart__blocks { background: var(--rf-blush); padding: 2.4rem; }
+.cart-item__name:hover { color: var(--rf-red); }
+.cart-items thead th { color: var(--rf-black); }
+.title--primary + .underlined-link, .cart__empty-text + .button { color: var(--rf-black); }
