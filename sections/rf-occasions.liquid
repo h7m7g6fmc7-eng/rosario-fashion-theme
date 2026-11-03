@@ -5,6 +5,7 @@
     {%- if section.settings.heading != blank -%}<h2 class="rf-h2">{{ section.settings.heading | escape }}</h2>{%- endif -%}
   </div>
   <div class="rf-occasions__grid">
+    {%- assign used_ids = ',' -%}
     {%- for block in section.blocks -%}
       {%- liquid
         assign c = block.settings.collection
@@ -12,11 +13,16 @@
         if img == blank and c != blank
           assign img = c.featured_image
           if img == blank and c.products.size > 0
-            assign pick = forloop.index0
-            if pick >= c.products.size
-              assign pick = 0
-            endif
-            assign img = c.products[pick].featured_media.preview_image
+            for p in c.products limit: 12
+              assign pid = p.id | append: ','
+              unless used_ids contains pid
+                if p.featured_media
+                  assign img = p.featured_media.preview_image
+                  assign used_ids = used_ids | append: pid
+                  break
+                endif
+              endunless
+            endfor
           endif
         endif
         assign label = block.settings.label
