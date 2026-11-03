@@ -1,0 +1,61 @@
+{%- comment -%}
+  Rosario Fashion product card.
+  Accepts: product (required), sizes (optional)
+{%- endcomment -%}
+{%- liquid
+  assign sizes = sizes | default: '(min-width: 990px) 25vw, 50vw'
+  assign now_s = 'now' | date: '%s' | plus: 0
+  assign created_s = product.created_at | date: '%s' | plus: 0
+  assign age_days = now_s | minus: created_s | divided_by: 86400
+  assign tags_down = product.tags | join: '|' | downcase | split: '|'
+  assign is_new = false
+  if age_days < 30 or tags_down contains 'new' or tags_down contains 'new in'
+    assign is_new = true
+  endif
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+  assign color_option = product.options_with_values | where: 'name', 'Color' | first
+  unless color_option
+    assign color_option = product.options_with_values | where: 'name', 'Colour' | first
+  endunless
+  assign second = product.media[1]
+  assign card_alt = product.featured_media.alt | default: product.title
+-%}
+<a class="rf-card" href="{{ product.url }}">
+  <div class="rf-card__media">
+    {%- if product.featured_media -%}
+      {{ product.featured_media.preview_image | image_url: width: 900 | image_tag: class: 'rf-card__img', loading: 'lazy', sizes: sizes, widths: '360, 540, 720, 900', alt: card_alt }}
+      {%- if second and second.media_type == 'image' -%}
+        {{ second.preview_image | image_url: width: 900 | image_tag: class: 'rf-card__img rf-card__img--alt', loading: 'lazy', sizes: sizes, widths: '360, 540, 720, 900', alt: '' }}
+      {%- endif -%}
+    {%- endif -%}
+    {%- if product.available == false -%}
+      <span class="rf-badge rf-badge--dark">Sold out</span>
+    {%- elsif is_new -%}
+      <span class="rf-badge">New</span>
+    {%- elsif on_sale -%}
+      <span class="rf-badge rf-badge--wine">Sale</span>
+    {%- endif -%}
+  </div>
+  <div class="rf-card__info">
+    <span class="rf-card__title">{{ product.title | escape }}</span>
+    <span class="rf-card__price">
+      {%- if on_sale -%}
+        <span class="visually-hidden">Sale price</span>{{ product.price | money }}
+        <s class="rf-card__compare"><span class="visually-hidden">Regular price</span>{{ product.compare_at_price | money }}</s>
+      {%- else -%}
+        {%- if product.price_varies -%}From {% endif -%}{{ product.price | money }}
+      {%- endif -%}
+    </span>
+    {%- if color_option and color_option.values.size > 1 -%}
+      <span class="rf-swatches" aria-label="{{ color_option.values.size }} colors">
+        {%- for v in color_option.values limit: 6 -%}
+          {%- assign css = v | downcase | remove: ' ' | remove: '-' -%}
+          <span class="rf-swatch" style="background: {% if v.swatch.color %}{{ v.swatch.color }}{% else %}{{ css }}{% endif %};" title="{{ v | escape }}"></span>
+        {%- endfor -%}
+      </span>
+    {%- endif -%}
+  </div>
+</a>

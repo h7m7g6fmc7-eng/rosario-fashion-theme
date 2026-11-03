@@ -17,8 +17,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "New arrivals every Monday · Black Friday starts November 27",
-            "link": ""
+            "text": "New arrivals every week · Free US shipping over [$XX]",
+            "link": "shopify://collections/tops"
           }
         }
       },
@@ -33,20 +33,101 @@
         "menu_color_scheme": "scheme-1",
         "logo_position": "middle-center",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "drawer",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 16,
+        "padding_bottom": 8
       }
+    },
+    "rf_catnav": {
+      "type": "rf-category-nav",
+      "blocks": {
+        "l1": {
+          "type": "link",
+          "settings": {
+            "label": "New In",
+            "collection": "tops",
+            "highlight": false
+          }
+        },
+        "l2": {
+          "type": "link",
+          "settings": {
+            "label": "Tops",
+            "collection": "tops",
+            "highlight": false
+          }
+        },
+        "l3": {
+          "type": "link",
+          "settings": {
+            "label": "Going Out",
+            "collection": "party-going-out",
+            "highlight": false
+          }
+        },
+        "l4": {
+          "type": "link",
+          "settings": {
+            "label": "Vacation",
+            "collection": "vacation",
+            "highlight": false
+          }
+        },
+        "l5": {
+          "type": "link",
+          "settings": {
+            "label": "Halter",
+            "collection": "halter-tops",
+            "highlight": false
+          }
+        },
+        "l6": {
+          "type": "link",
+          "settings": {
+            "label": "Swim",
+            "collection": "swimwear",
+            "highlight": false
+          }
+        },
+        "l7": {
+          "type": "link",
+          "settings": {
+            "label": "Dresses & Sets",
+            "collection": "dresses-sets-bottoms",
+            "highlight": false
+          }
+        },
+        "l8": {
+          "type": "link",
+          "settings": {
+            "label": "Accessories",
+            "collection": "accessories",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5",
+        "l6",
+        "l7",
+        "l8"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "rf_catnav"
   ]
 }

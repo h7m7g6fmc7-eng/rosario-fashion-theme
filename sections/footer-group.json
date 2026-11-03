@@ -32,8 +32,8 @@
         "help"
       ],
       "settings": {
-        "color_scheme": "scheme-5",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-4",
+        "newsletter_enable": false,
         "newsletter_heading": "Join the Rosario Circle",
         "enable_follow_on_shop": true,
         "show_social": true,

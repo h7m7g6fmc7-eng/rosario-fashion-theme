@@ -7,57 +7,57 @@
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#FCF2F3",
+            "background": "#FFF9F7",
             "background_gradient": "",
-            "text": "#3A0F1E",
-            "button": "#3A0F1E",
-            "button_label": "#FCF2F3",
-            "secondary_button_label": "#3A0F1E",
-            "shadow": "#3A0F1E"
+            "text": "#2A1A20",
+            "button": "#6B1E34",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#6B1E34",
+            "shadow": "#2A1A20"
           }
         },
         "scheme-2": {
           "settings": {
-            "background": "#F6DFE4",
+            "background": "#F6DDE2",
             "background_gradient": "",
-            "text": "#3A0F1E",
-            "button": "#3A0F1E",
-            "button_label": "#F6DFE4",
-            "secondary_button_label": "#7B1E3E",
-            "shadow": "#3A0F1E"
+            "text": "#6B1E34",
+            "button": "#6B1E34",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#6B1E34",
+            "shadow": "#2A1A20"
           }
         },
         "scheme-3": {
           "settings": {
-            "background": "#3A0F1E",
+            "background": "#6B1E34",
             "background_gradient": "",
-            "text": "#FCF2F3",
-            "button": "#FCF2F3",
-            "button_label": "#3A0F1E",
-            "secondary_button_label": "#FCF2F3",
-            "shadow": "#3A0F1E"
+            "text": "#FFF9F7",
+            "button": "#FFF9F7",
+            "button_label": "#6B1E34",
+            "secondary_button_label": "#FFF9F7",
+            "shadow": "#2A1A20"
           }
         },
         "scheme-4": {
           "settings": {
-            "background": "#7B1E3E",
+            "background": "#2A1A20",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#7B1E3E",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#3A0F1E"
+            "text": "#F3E6E8",
+            "button": "#FFF9F7",
+            "button_label": "#2A1A20",
+            "secondary_button_label": "#FFF9F7",
+            "shadow": "#2A1A20"
           }
         },
         "scheme-5": {
           "settings": {
-            "background": "#F6DFE4",
-            "background_gradient": "linear-gradient(180deg, rgba(252, 242, 243, 1) 0%, rgba(246, 223, 228, 1) 100%)",
-            "text": "#7B1E3E",
-            "button": "#7B1E3E",
-            "button_label": "#FCF2F3",
-            "secondary_button_label": "#7B1E3E",
-            "shadow": "#3A0F1E"
+            "background": "#FBEEF0",
+            "background_gradient": "",
+            "text": "#2A1A20",
+            "button": "#6B1E34",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#6B1E34",
+            "shadow": "#2A1A20"
           }
         }
       },
@@ -65,12 +65,12 @@
       "heading_scale": 110,
       "type_body_font": "jost_n4",
       "body_scale": 100,
-      "page_width": 1400,
+      "page_width": 1440,
       "spacing_sections": 24,
-      "spacing_grid_horizontal": 12,
-      "spacing_grid_vertical": 24,
+      "spacing_grid_horizontal": 4,
+      "spacing_grid_vertical": 32,
       "animations_reveal_on_scroll": true,
-      "animations_hover_elements": "vertical-lift",
+      "animations_hover_elements": "none",
       "buttons_border_thickness": 1,
       "buttons_border_opacity": 100,
       "buttons_radius": 0,
@@ -152,12 +152,12 @@
       "drawer_shadow_horizontal_offset": 0,
       "drawer_shadow_vertical_offset": 4,
       "drawer_shadow_blur": 5,
-      "badge_position": "bottom left",
+      "badge_position": "top left",
       "badge_corner_radius": 0,
-      "sale_badge_color_scheme": "scheme-4",
-      "sold_out_badge_color_scheme": "scheme-3",
+      "sale_badge_color_scheme": "scheme-3",
+      "sold_out_badge_color_scheme": "scheme-4",
       "brand_headline": "Rosario Fashion",
-      "brand_description": "<p>Timeless women's fashion and jewelry, curated for everyday elegance.</p>",
+      "brand_description": "<p>Romantic, feminine, unforgettable.</p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
@@ -170,11 +170,11 @@
       "social_vimeo_link": "",
       "predictive_search_enabled": true,
       "predictive_search_show_vendor": false,
-      "predictive_search_show_price": false,
+      "predictive_search_show_price": true,
       "currency_code_enabled": true,
       "cart_type": "drawer",
       "show_vendor": false,
-      "show_cart_note": true,
+      "show_cart_note": false,
       "cart_drawer_collection": "",
       "cart_color_scheme": "scheme-1",
       "sections": {

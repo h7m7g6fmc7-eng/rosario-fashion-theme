@@ -1,0 +1,39 @@
+{%- comment -%} Rosario Fashion — wine editorial band (image · text · image) {%- endcomment -%}
+<section class="rf-editorial color-scheme-3">
+  <div class="rf-editorial__media">
+    {%- if section.settings.image_1 != blank -%}
+      {{ section.settings.image_1 | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 33vw, 100vw', widths: '540, 800, 1200', alt: section.settings.image_1.alt }}
+    {%- else -%}<div class="rf-placeholder rf-placeholder--wine" aria-hidden="true"></div>{%- endif -%}
+  </div>
+  <div class="rf-editorial__text">
+    {%- if section.settings.eyebrow != blank -%}<p class="rf-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="rf-h2 rf-h2--xl">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+    {%- if section.settings.text != blank -%}<p class="rf-lead">{{ section.settings.text | escape }}</p>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a class="rf-btn rf-btn--light" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
+    {%- endif -%}
+  </div>
+  <div class="rf-editorial__media rf-editorial__media--second">
+    {%- if section.settings.image_2 != blank -%}
+      {{ section.settings.image_2 | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 33vw, 100vw', widths: '540, 800, 1200', alt: section.settings.image_2.alt }}
+    {%- else -%}<div class="rf-placeholder rf-placeholder--rose" aria-hidden="true"></div>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RF Editorial band",
+  "tag": "div",
+  "class": "rf-section",
+  "settings": [
+    { "type": "image_picker", "id": "image_1", "label": "Left image" },
+    { "type": "image_picker", "id": "image_2", "label": "Right image" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Party Edit" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Dressed for the after-party" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Corset tops, sheer lace and statement backs, chosen for birthdays, date nights and every plan in between." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop party" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "RF Editorial band" }]
+}
+{% endschema %}

@@ -1,272 +1,240 @@
 {
   "sections": {
-    "announcement_hero": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Effortless Elegance",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "The new season edit — timeless pieces made to be lived in.",
-            "text_style": "subtitle"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop New Arrivals",
-            "button_link_1": "shopify://collections/tops",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
+    "hero": {
+      "type": "rf-hero",
+      "settings": {
+        "image": "shopify://shop_images/rosario-hero.jpg",
+        "eyebrow": "The Holiday Edit",
+        "heading": "Made for the nights you'll remember",
+        "subheading": "Corsets, lace and satin in wine, ivory and blush.",
+        "button_label_1": "Shop the edit",
+        "button_link_1": "shopify://collections/party-going-out",
+        "button_label_2": "New In",
+        "button_link_2": "shopify://collections/tops",
+        "height": "large",
+        "placeholder_color": "#E7CBD1"
+      }
+    },
+    "occasions": {
+      "type": "rf-occasions",
+      "settings": {
+        "eyebrow": "Shop by occasion",
+        "heading": "Something for every plan"
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 30,
-        "image_height": "large",
-        "desktop_content_position": "bottom-left",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "intro": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Designed for the modern woman",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Clean lines, soft fabrics and finishing touches in gold. Every piece is chosen to pair with what you already love.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 56,
-        "padding_bottom": 40
-      }
-    },
-    "new_arrivals": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "New Arrivals",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "tops",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": true,
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "categories": {
-      "type": "collection-list",
-      "blocks": {
-        "c1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "tops"
-          }
-        },
-        "c2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "party-going-out"
-          }
-        },
-        "c3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "vacation"
-          }
-        }
-      },
-      "block_order": [
-        "c1",
-        "c2",
-        "c3"
-      ],
-      "settings": {
-        "title": "Shop by Category",
-        "heading_size": "h2",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-2",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
-    },
-    "benefits": {
-      "type": "multicolumn",
       "blocks": {
         "b1": {
-          "type": "column",
+          "type": "occasion",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>On all US orders over $50.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "party-going-out",
+            "label": "Going Out"
           }
         },
         "b2": {
-          "type": "column",
+          "type": "occasion",
           "settings": {
-            "title": "Easy Returns",
-            "text": "<p>30 days to fall in love — or send it back.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "vacation",
+            "label": "Vacation Edit"
           }
         },
         "b3": {
-          "type": "column",
+          "type": "occasion",
           "settings": {
-            "title": "Secure Checkout",
-            "text": "<p>Encrypted payments, every time.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "halter-tops",
+            "label": "Halter Tops"
+          }
+        },
+        "b4": {
+          "type": "occasion",
+          "settings": {
+            "collection": "swimwear",
+            "label": "Swim"
           }
         }
       },
       "block_order": [
         "b1",
         "b2",
-        "b3"
-      ],
+        "b3",
+        "b4"
+      ]
+    },
+    "new_in": {
+      "type": "rf-new-in",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "eyebrow": "Just landed",
+        "heading": "New In",
+        "collection": "tops",
+        "products_to_show": 8,
+        "view_all_label": "View all new in"
+      },
+      "blocks": {
+        "b1": {
+          "type": "filter",
+          "settings": {
+            "collection": "tops",
+            "label": "All"
+          }
+        },
+        "b2": {
+          "type": "filter",
+          "settings": {
+            "collection": "party-going-out",
+            "label": "Going Out"
+          }
+        },
+        "b3": {
+          "type": "filter",
+          "settings": {
+            "collection": "halter-tops",
+            "label": "Halter"
+          }
+        },
+        "b4": {
+          "type": "filter",
+          "settings": {
+            "collection": "vacation",
+            "label": "Vacation"
+          }
+        },
+        "b5": {
+          "type": "filter",
+          "settings": {
+            "collection": "swimwear",
+            "label": "Swim"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    },
+    "editorial": {
+      "type": "rf-editorial",
+      "settings": {
+        "image_1": "shopify://shop_images/rosario-new-1.jpg",
+        "image_2": "shopify://shop_images/rosario-editorial.jpg",
+        "eyebrow": "The Party Edit",
+        "heading": "Dressed for the after-party",
+        "text": "Corset tops, sheer lace and statement backs, chosen for birthdays, date nights and every plan in between.",
+        "button_label": "Shop party",
+        "button_link": "shopify://collections/party-going-out"
       }
     },
-    "newsletter": {
-      "type": "newsletter",
+    "feature": {
+      "type": "rf-split",
+      "settings": {
+        "eyebrow": "Finishing touches",
+        "heading": "Bags and jewelry that complete the look",
+        "text": "Structured bags, gold-tone hoops and delicate layers, styled to pair with every top in the collection.",
+        "button_label": "Shop accessories",
+        "button_link": "shopify://collections/accessories",
+        "image_1": "shopify://shop_images/rosario-cat-bags.jpg",
+        "image_2": "shopify://shop_images/rosario-new-4.jpg"
+      }
+    },
+    "benefits": {
+      "type": "rf-benefits",
+      "settings": {},
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "b1": {
+          "type": "benefit",
           "settings": {
-            "heading": "Join the Rosario List",
-            "heading_size": "h1"
+            "title": "Free US shipping",
+            "text": "On orders over [$XX]"
           }
         },
-        "paragraph": {
-          "type": "paragraph",
+        "b2": {
+          "type": "benefit",
           "settings": {
-            "text": "<p>Be first to know about new arrivals and private offers.</p>"
+            "title": "30-day returns",
+            "text": "[Return policy summary]"
           }
         },
-        "email_form": {
-          "type": "email_form",
+        "b3": {
+          "type": "benefit",
+          "settings": {
+            "title": "Secure checkout",
+            "text": "Shop Pay, cards and more"
+          }
+        },
+        "b4": {
+          "type": "benefit",
+          "settings": {
+            "title": "Find your size",
+            "text": "US 0–12 size guide"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ]
+    },
+    "ugc": {
+      "type": "rf-ugc",
+      "settings": {
+        "eyebrow": "@rosariofashion",
+        "heading": "As worn by you"
+      },
+      "blocks": {
+        "b1": {
+          "type": "post",
+          "settings": {}
+        },
+        "b2": {
+          "type": "post",
+          "settings": {}
+        },
+        "b3": {
+          "type": "post",
+          "settings": {}
+        },
+        "b4": {
+          "type": "post",
+          "settings": {}
+        },
+        "b5": {
+          "type": "post",
+          "settings": {}
+        },
+        "b6": {
+          "type": "post",
           "settings": {}
         }
       },
       "block_order": [
-        "heading",
-        "paragraph",
-        "email_form"
-      ],
-      "settings": {
-        "color_scheme": "scheme-5",
-        "full_width": true,
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ]
     },
-    "party_edit": {
-      "type": "featured-collection",
+    "newsletter": {
+      "type": "rf-newsletter",
       "settings": {
-        "title": "Party & Going Out",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "party-going-out",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "swipe_on_mobile": true,
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "The Rosario Circle",
+        "heading": "[X]% off your first order",
+        "text": "First look at new drops, styling notes and private sales.",
+        "button_label": "Join"
       }
     }
   },
   "order": [
-    "announcement_hero",
-    "intro",
-    "new_arrivals",
-    "categories",
-    "party_edit",
+    "hero",
+    "occasions",
+    "new_in",
+    "editorial",
+    "feature",
     "benefits",
+    "ugc",
     "newsletter"
   ]
 }

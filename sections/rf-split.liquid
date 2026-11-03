@@ -1,0 +1,40 @@
+{%- comment -%} Rosario Fashion — text + two images (jewelry / feature) {%- endcomment -%}
+<section class="rf-split page-width">
+  <div class="rf-split__text">
+    {%- if section.settings.eyebrow != blank -%}<p class="rf-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="rf-h2 rf-h2--lg">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+    {%- if section.settings.text != blank -%}<p class="rf-body">{{ section.settings.text | escape }}</p>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a class="rf-btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
+    {%- endif -%}
+  </div>
+  <div class="rf-split__images">
+    {%- for key in (1..2) -%}
+      {%- assign setting_id = 'image_' | append: key -%}
+      {%- assign img = section.settings[setting_id] -%}
+      <div class="rf-split__img">
+        {%- if img != blank -%}
+          {{ img | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', widths: '360, 540, 720, 900', alt: img.alt }}
+        {%- else -%}<div class="rf-placeholder" aria-hidden="true"></div>{%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RF Feature split",
+  "tag": "div",
+  "class": "rf-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Finishing touches" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Jewelry that completes the look" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Gold-tone hoops, pearls and delicate layers, styled to pair with every top in the collection." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop jewelry" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "image_picker", "id": "image_1", "label": "Image 1" },
+    { "type": "image_picker", "id": "image_2", "label": "Image 2" }
+  ],
+  "presets": [{ "name": "RF Feature split" }]
+}
+{% endschema %}

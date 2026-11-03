@@ -1,0 +1,48 @@
+{%- comment -%} Rosario Fashion — category bar under the header (links set here, not in the store menu) {%- endcomment -%}
+<nav class="rf-catnav" aria-label="Categories">
+  <ul class="rf-catnav__list" role="list">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign bc = block.settings.collection
+        assign href = block.settings.link
+        if href == blank and bc != blank
+          assign href = bc.url
+        endif
+        if href == blank
+          assign href = routes.all_products_collection_url
+        endif
+        assign label = block.settings.label | default: bc.title
+        assign active = false
+        if bc != blank and collection and collection.handle == bc.handle
+          assign active = true
+        endif
+      -%}
+      <li {{ block.shopify_attributes }}>
+        <a class="rf-catnav__link{% if block.settings.highlight %} rf-catnav__link--accent{% endif %}{% if active %} is-active{% endif %}" href="{{ href }}"{% if active %} aria-current="page"{% endif %}>{{ label | escape }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+{% schema %}
+{
+  "name": "RF Category bar",
+  "tag": "div",
+  "class": "rf-section rf-catnav-section",
+  "max_blocks": 10,
+  "enabled_on": { "groups": ["header"] },
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Category",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label" },
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "url", "id": "link", "label": "Custom link (optional)" },
+        { "type": "checkbox", "id": "highlight", "label": "Highlight in wine", "default": false }
+      ]
+    }
+  ],
+  "presets": [{ "name": "RF Category bar" }]
+}
+{% endschema %}

@@ -1,0 +1,64 @@
+{%- comment -%} Rosario Fashion — campaign hero {%- endcomment -%}
+<section class="rf-hero rf-hero--{{ section.settings.height }}" style="--rf-placeholder: {{ section.settings.placeholder_color }};">
+  <div class="rf-hero__media">
+    {%- if section.settings.image != blank -%}
+      {%- assign hero_alt = section.settings.image.alt | default: section.settings.heading -%}
+      {%- if section.settings.mobile_image != blank -%}
+        {{ section.settings.mobile_image | image_url: width: 1200 | image_tag: class: 'rf-hero__img rf-hero__img--mobile', loading: 'eager', sizes: '100vw', alt: hero_alt }}
+      {%- endif -%}
+      {{ section.settings.image | image_url: width: 2800 | image_tag: class: 'rf-hero__img', loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '750, 1100, 1500, 2000, 2800', alt: hero_alt }}
+    {%- else -%}
+      <div class="rf-placeholder" aria-hidden="true"><span>{{ 'Campaign photo' }}</span></div>
+    {%- endif -%}
+  </div>
+  <div class="rf-hero__content page-width">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="rf-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h1 class="rf-hero__heading">{{ section.settings.heading | escape }}</h1>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="rf-hero__sub">{{ section.settings.subheading | escape }}</p>
+    {%- endif -%}
+    <div class="rf-actions">
+      {%- if section.settings.button_label_1 != blank -%}
+        <a class="rf-btn" href="{{ section.settings.button_link_1 | default: routes.all_products_collection_url }}">{{ section.settings.button_label_1 | escape }}</a>
+      {%- endif -%}
+      {%- if section.settings.button_label_2 != blank -%}
+        <a class="rf-btn rf-btn--outline" href="{{ section.settings.button_link_2 | default: routes.all_products_collection_url }}">{{ section.settings.button_label_2 | escape }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RF Hero",
+  "tag": "div",
+  "class": "rf-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "image_picker", "id": "mobile_image", "label": "Mobile image (optional)" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Holiday Edit" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Made for the nights you'll remember" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Corsets, lace and satin in wine, ivory and blush." },
+    { "type": "text", "id": "button_label_1", "label": "Button 1 label", "default": "Shop the edit" },
+    { "type": "url", "id": "button_link_1", "label": "Button 1 link" },
+    { "type": "text", "id": "button_label_2", "label": "Button 2 label", "default": "New In" },
+    { "type": "url", "id": "button_link_2", "label": "Button 2 link" },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Height",
+      "options": [
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "large"
+    },
+    { "type": "color", "id": "placeholder_color", "label": "Placeholder color", "default": "#E7CBD1" }
+  ],
+  "presets": [{ "name": "RF Hero" }]
+}
+{% endschema %}
