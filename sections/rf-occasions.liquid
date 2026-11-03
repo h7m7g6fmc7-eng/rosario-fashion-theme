@@ -12,7 +12,11 @@
         if img == blank and c != blank
           assign img = c.featured_image
           if img == blank and c.products.size > 0
-            assign img = c.products.first.featured_media.preview_image
+            assign pick = forloop.index0
+            if pick >= c.products.size
+              assign pick = 0
+            endif
+            assign img = c.products[pick].featured_media.preview_image
           endif
         endif
         assign label = block.settings.label
