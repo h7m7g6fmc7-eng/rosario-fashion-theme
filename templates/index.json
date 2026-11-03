@@ -224,7 +224,8 @@
         "b4",
         "b5",
         "b6"
-      ]
+      ],
+      "disabled": true
     },
     "newsletter": {
       "type": "rf-newsletter",
