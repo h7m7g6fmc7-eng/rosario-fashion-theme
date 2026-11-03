@@ -1,0 +1,54 @@
+{%- comment -%} Rosario Fashion — "Why Rosario" brand promise band (brand voice, no customer names or ratings) {%- endcomment -%}
+<section class="rf-promise">
+  <div class="rf-section-head">
+    {%- if section.settings.eyebrow != blank -%}<p class="rf-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="rf-h2">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+  </div>
+  <div class="rf-promise__grid">
+    {%- for block in section.blocks -%}
+      <div class="rf-promise__card rf-promise__card--{{ block.settings.style }}" {{ block.shopify_attributes }}>
+        {%- if block.settings.label != blank -%}<span class="rf-promise__label">{{ block.settings.label | escape }}</span>{%- endif -%}
+        <p class="rf-promise__quote">{{ block.settings.text | escape }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RF Why Rosario",
+  "tag": "div",
+  "class": "rf-section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Why Rosario" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Made to make you feel special" }
+  ],
+  "blocks": [
+    {
+      "type": "promise",
+      "name": "Promise",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Feminine" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Pieces chosen to make you feel special." },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Card color",
+          "options": [
+            { "value": "black", "label": "Black" },
+            { "value": "red", "label": "Red" },
+            { "value": "pink", "label": "Pink" },
+            { "value": "wine", "label": "Wine" },
+            { "value": "white", "label": "White" }
+          ],
+          "default": "black"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "RF Why Rosario", "blocks": [{ "type": "promise" }, { "type": "promise" }, { "type": "promise" }, { "type": "promise" }] }
+  ]
+}
+{% endschema %}

@@ -16,13 +16,13 @@
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#FFF9F7",
+            "background": "#FFFFFF",
             "background_gradient": "",
-            "text": "#2A1A20",
-            "button": "#6B1E34",
+            "text": "#141414",
+            "button": "#141414",
             "button_label": "#FFFFFF",
-            "secondary_button_label": "#6B1E34",
-            "shadow": "#2A1A20"
+            "secondary_button_label": "#141414",
+            "shadow": "#141414"
           }
         },
         "scheme-2": {
@@ -30,43 +30,43 @@
             "background": "#F6DDE2",
             "background_gradient": "",
             "text": "#6B1E34",
-            "button": "#6B1E34",
+            "button": "#141414",
             "button_label": "#FFFFFF",
             "secondary_button_label": "#6B1E34",
-            "shadow": "#2A1A20"
+            "shadow": "#141414"
           }
         },
         "scheme-3": {
           "settings": {
             "background": "#6B1E34",
             "background_gradient": "",
-            "text": "#FFF9F7",
-            "button": "#FFF9F7",
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
             "button_label": "#6B1E34",
-            "secondary_button_label": "#FFF9F7",
-            "shadow": "#2A1A20"
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#141414"
           }
         },
         "scheme-4": {
           "settings": {
-            "background": "#2A1A20",
+            "background": "#141414",
             "background_gradient": "",
-            "text": "#F3E6E8",
-            "button": "#FFF9F7",
-            "button_label": "#2A1A20",
-            "secondary_button_label": "#FFF9F7",
-            "shadow": "#2A1A20"
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#141414",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#141414"
           }
         },
         "scheme-5": {
           "settings": {
-            "background": "#FBEEF0",
+            "background": "#C8102E",
             "background_gradient": "",
-            "text": "#2A1A20",
-            "button": "#6B1E34",
-            "button_label": "#FFFFFF",
-            "secondary_button_label": "#6B1E34",
-            "shadow": "#2A1A20"
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#C8102E",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#141414"
           }
         }
       },
@@ -163,7 +163,7 @@
       "drawer_shadow_blur": 5,
       "badge_position": "top left",
       "badge_corner_radius": 0,
-      "sale_badge_color_scheme": "scheme-3",
+      "sale_badge_color_scheme": "scheme-5",
       "sold_out_badge_color_scheme": "scheme-4",
       "brand_headline": "Rosario Fashion",
       "brand_description": "<p>Romantic, feminine, unforgettable.</p>",

@@ -1,5 +1,5 @@
 {%- comment -%} Rosario Fashion — wine editorial band (image · text · image) {%- endcomment -%}
-<section class="rf-editorial color-scheme-3">
+<section class="rf-editorial rf-editorial--{{ section.settings.style | default: 'wine' }}">
   <div class="rf-editorial__media">
     {%- if section.settings.image_1 != blank -%}
       {{ section.settings.image_1 | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 33vw, 100vw', widths: '540, 800, 1200', alt: section.settings.image_1.alt }}
@@ -26,6 +26,17 @@
   "tag": "div",
   "class": "rf-section",
   "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Color",
+      "options": [
+        { "value": "wine", "label": "Wine" },
+        { "value": "black", "label": "Black" },
+        { "value": "red", "label": "Red" }
+      ],
+      "default": "wine"
+    },
     { "type": "image_picker", "id": "image_1", "label": "Left image" },
     { "type": "image_picker", "id": "image_2", "label": "Right image" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Party Edit" },

@@ -130,7 +130,8 @@
         "heading": "Dressed for the after-party",
         "text": "Corset tops, sheer lace and statement backs, chosen for birthdays, date nights and every plan in between.",
         "button_label": "Shop party",
-        "button_link": "shopify://collections/party-going-out"
+        "button_link": "shopify://collections/party-going-out",
+        "style": "black"
       }
     },
     "feature": {
@@ -242,6 +243,53 @@
         "eyebrow": "Reviews",
         "heading": "What our customers say"
       }
+    },
+    "promise": {
+      "type": "rf-promise",
+      "settings": {
+        "eyebrow": "Why Rosario",
+        "heading": "Made to make you feel special"
+      },
+      "blocks": {
+        "p1": {
+          "type": "promise",
+          "settings": {
+            "label": "Feminine",
+            "text": "Pieces chosen to make you feel special.",
+            "style": "black"
+          }
+        },
+        "p2": {
+          "type": "promise",
+          "settings": {
+            "label": "Elegant",
+            "text": "Feminine, elegant and made for every occasion.",
+            "style": "red"
+          }
+        },
+        "p3": {
+          "type": "promise",
+          "settings": {
+            "label": "Easy to love",
+            "text": "Easy to style, easy to wear, easy to love.",
+            "style": "pink"
+          }
+        },
+        "p4": {
+          "type": "promise",
+          "settings": {
+            "label": "Every plan",
+            "text": "From date night to vacation, a look for every plan.",
+            "style": "wine"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
     }
   },
   "order": [
@@ -252,7 +300,7 @@
     "feature",
     "benefits",
     "reviews",
-    "ugc",
+    "promise",
     "newsletter"
   ]
 }

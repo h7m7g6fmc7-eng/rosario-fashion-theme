@@ -274,3 +274,145 @@ a { text-underline-offset: .3rem; }
 .rf-reviews .jdgm-rev__title, .rf-reviews .jdgm-carousel-title { font-family: var(--rf-display) !important; color: var(--rf-wine) !important; }
 .rf-reviews .jdgm-rev__body, .rf-reviews .jdgm-carousel-item__review { font-family: var(--rf-serif) !important; font-style: italic; font-size: 1.9rem !important; line-height: 1.45; }
 @media screen and (max-width: 749px) { .rf-reviews { padding: 4.8rem 0; } }
+
+/* ==========================================================
+   Paleta ampliada v2: negro, blanco y rojo junto al vino y el rosa
+   (estas reglas van al final para sobrescribir las anteriores)
+   ========================================================== */
+:root {
+  --rf-black: #141414;
+  --rf-white: #FFFFFF;
+  --rf-red: #C8102E;
+  --rf-red-dark: #9E0B23;
+  --rf-grey: #6B6B6B;
+  --rf-line: #E8E2E3;
+}
+body, .rf-section { background: var(--rf-white); }
+.rf-eyebrow { color: var(--rf-grey); }
+
+/* Botones: negro principal, rojo al pasar el mouse */
+.rf-btn { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.rf-btn:hover { background: var(--rf-red); border-color: var(--rf-red); color: var(--rf-white); }
+.rf-btn--outline { background: transparent; color: var(--rf-black); border-color: var(--rf-black); }
+.rf-btn--outline:hover { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.rf-btn--light { background: var(--rf-white); color: var(--rf-black); border-color: var(--rf-white); }
+.rf-btn--light:hover { background: var(--rf-red); border-color: var(--rf-red); color: var(--rf-white); }
+.rf-btn:focus-visible, .rf-filter:focus-visible, .rf-catnav__link:focus-visible, .rf-card:focus-visible, .rf-tile:focus-visible { outline-color: var(--rf-red); }
+.button:not(.button--secondary):not(.button--tertiary):hover { --color-button: 200, 16, 46; }
+
+/* Barra de anuncios negra */
+.announcement-bar__message, .announcement-bar__link { color: var(--rf-white); }
+
+/* Barra de categorías */
+.rf-catnav-section { background: var(--rf-white); }
+.rf-catnav__link { color: var(--rf-black); }
+.rf-catnav__link:hover, .rf-catnav__link.is-active { text-decoration-color: var(--rf-red); }
+.rf-catnav__link--accent { color: var(--rf-red); }
+@media screen and (max-width: 749px) {
+  .rf-catnav__link { border-color: var(--rf-line); }
+  .rf-catnav__link.is-active { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+}
+
+/* Filtros y tarjetas */
+.rf-filter { border-color: var(--rf-line); color: var(--rf-black); }
+.rf-filter:hover { border-color: var(--rf-black); color: var(--rf-black); }
+.rf-filter.is-active { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.rf-card__media { background: #F4F1F1; }
+.rf-badge { background: var(--rf-white); border-color: var(--rf-black); color: var(--rf-black); }
+.rf-badge--wine { background: var(--rf-red); border-color: var(--rf-red); color: var(--rf-white); }
+.rf-badge--dark { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.rf-card__price { color: var(--rf-black); }
+.rf-card__compare { color: var(--rf-grey); }
+.rf-card:has(.rf-card__compare) .rf-card__price { color: var(--rf-red); }
+.price--on-sale .price-item--sale { color: var(--rf-red); }
+.rf-link-caps { color: var(--rf-black); }
+.rf-tile:hover .rf-link-caps { color: var(--rf-red); }
+
+/* Banda editorial en vino, negro o rojo */
+.rf-editorial--wine { background: var(--rf-wine); }
+.rf-editorial--black { background: var(--rf-black); }
+.rf-editorial--black .rf-eyebrow { color: #FF6B81; }
+.rf-editorial--black .rf-btn--light:hover { background: var(--rf-red); }
+.rf-editorial--red { background: var(--rf-red); }
+.rf-editorial--red .rf-eyebrow { color: var(--rf-white); }
+.rf-editorial--red .rf-btn--light:hover { background: var(--rf-black); border-color: var(--rf-black); }
+.rf-editorial .rf-h2, .rf-editorial .rf-lead { color: var(--rf-white); }
+
+/* Bolsas y joyería: título en negro */
+.rf-split .rf-h2 { color: var(--rf-black); }
+
+/* Beneficios */
+.rf-benefits { background: #FAFAFA; }
+.rf-benefit__title { color: var(--rf-black); }
+.rf-benefit__text { color: var(--rf-grey); }
+
+/* Why Rosario */
+.rf-promise { padding: 8rem 0 7.2rem; }
+.rf-promise__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem; }
+.rf-promise__card { aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding: 3.2rem; box-sizing: border-box; }
+.rf-promise__label { font-size: 1.2rem; letter-spacing: .3em; text-transform: uppercase; }
+.rf-promise__quote { margin: 0; font-family: var(--rf-serif); font-style: italic; font-size: clamp(2.2rem, 2.2vw, 3rem); line-height: 1.25; }
+.rf-promise__card--black { background: var(--rf-black); color: var(--rf-white); }
+.rf-promise__card--red { background: var(--rf-red); color: var(--rf-white); }
+.rf-promise__card--pink { background: var(--rf-rose); color: var(--rf-wine); }
+.rf-promise__card--wine { background: var(--rf-wine); color: var(--rf-white); }
+.rf-promise__card--white { background: var(--rf-white); color: var(--rf-black); border: 1px solid var(--rf-line); }
+@media screen and (max-width: 989px) { .rf-promise__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 749px) {
+  .rf-promise { padding: 4.8rem 0; }
+  .rf-promise__grid { gap: .3rem; }
+  .rf-promise__card { padding: 1.8rem; }
+  .rf-promise__quote { font-size: 1.9rem; }
+  .rf-promise__label { font-size: 1rem; letter-spacing: .2em; }
+}
+
+/* Newsletter rosa con botón negro */
+.rf-newsletter { background: var(--rf-rose); }
+.rf-newsletter__field { border-bottom-color: var(--rf-black); }
+.rf-newsletter__field input:focus { outline-color: var(--rf-black); }
+
+/* ---------- Colecciones y búsqueda ---------- */
+.collection-hero { background: var(--rf-white); padding: 5.6rem 0 2.4rem; text-align: center; }
+.collection-hero__inner { justify-content: center; text-align: center; }
+.collection-hero__text-wrapper { flex-basis: 100%; }
+.collection-hero__title, .main-page-title, .template-search__header h1 { font-family: var(--rf-display); font-weight: 400; font-size: clamp(3.4rem, 4vw, 5.2rem); color: var(--rf-black); text-transform: none; letter-spacing: .01em; margin: 0 auto; }
+.collection-hero__description { max-width: 60rem; margin: 1.2rem auto 0; color: var(--rf-grey); }
+.facets__summary, .facet-filters__label, .facets__label, .product-count__text, .mobile-facets__open-label { font-family: var(--font-body-family); font-size: 1.2rem; letter-spacing: .16em; text-transform: uppercase; color: var(--rf-black); }
+.facets-container { border-bottom: 1px solid var(--rf-line); padding-bottom: 1.2rem; }
+.active-facets__button-inner { border-radius: 0; }
+.product-grid.grid { column-gap: .4rem; row-gap: 3.2rem; }
+.collection .grid__item .card-wrapper .card__information, .template-search .card__information { padding-left: 1.2rem; padding-right: 1.2rem; }
+.card__badge .badge { border-radius: 0; }
+.pagination__item--current { border-bottom: 1px solid var(--rf-black); }
+
+/* ---------- Carrito limpio (cajón y página) ---------- */
+.cart-drawer .drawer__inner, .cart-drawer .drawer__inner-empty { background: var(--rf-white); }
+.drawer__header { border-bottom: 1px solid var(--rf-line); padding-bottom: 1.6rem; }
+.drawer__heading { font-family: var(--rf-display); font-weight: 400; font-size: 2.8rem; color: var(--rf-black); }
+.cart-items thead th, .cart-drawer .cart-items thead th { font-size: 1.1rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rf-grey); }
+.cart-item { border-bottom: 1px solid var(--rf-line); }
+.cart-item__name { font-family: var(--rf-serif); font-style: italic; font-size: 2rem; color: var(--rf-black); text-decoration: none; }
+.cart-item__name:hover { color: var(--rf-red); text-decoration: none; }
+.cart-item__details .product-option { color: var(--rf-grey); font-size: 1.3rem; }
+.cart-item .price { color: var(--rf-black); }
+.cart-item__discounted-prices .cart-item__final-price, .cart-item .price--end + .price { color: var(--rf-red); }
+.cart-item .quantity { border-radius: 0; min-height: 4.4rem; }
+.cart-item .quantity:after, .cart-item .quantity:before { border-radius: 0; box-shadow: 0 0 0 1px var(--rf-line); }
+.cart-remove-button .button { color: var(--rf-grey); }
+.cart-remove-button .button:hover { color: var(--rf-red); }
+.drawer__footer, .cart__footer { border-top: 1px solid var(--rf-line); }
+.totals__total, .totals__total-value { font-family: var(--font-body-family); font-size: 1.6rem; letter-spacing: .06em; color: var(--rf-black); }
+.tax-note { color: var(--rf-grey); font-size: 1.2rem; }
+#CartDrawer-Checkout, .cart__checkout-button { width: 100%; min-height: 5.6rem; background: var(--rf-black); color: var(--rf-white); border-radius: 0; letter-spacing: .2em; text-transform: uppercase; font-size: 1.3rem; }
+#CartDrawer-Checkout:hover, .cart__checkout-button:hover { background: var(--rf-red); }
+#CartDrawer-Checkout:after, .cart__checkout-button:after { box-shadow: none; }
+.cart__empty-text, .cart-drawer__empty-content .cart__empty-text { font-family: var(--rf-display); font-weight: 400; color: var(--rf-black); }
+.cart-drawer__empty-content .button, .cart__warnings .button { background: var(--rf-black); color: var(--rf-white); }
+.title-wrapper-with-link .title { font-family: var(--rf-display); color: var(--rf-black); }
+
+/* Ficha de producto */
+.product__title h1, .product__title .h1 { color: var(--rf-black); }
+.product-form__input input[type='radio']:checked + label { background: var(--rf-black); border-color: var(--rf-black); color: var(--rf-white); }
+.product-form__submit { background: var(--rf-black); }
+.product-form__submit:hover { background: var(--rf-red); }
+.product .price--on-sale .price-item--regular { color: var(--rf-grey); }
