@@ -14,7 +14,8 @@
           assign img = c.featured_image
           if img == blank and c.products.size > 0
             for p in c.products limit: 12
-              assign pid = ',' | append: p.id | append: ','
+              assign style_name = p.title | split: ' ' | first | downcase
+              assign pid = ',' | append: style_name | append: ','
               unless used_ids contains pid
                 if p.featured_media
                   assign img = p.featured_media.preview_image
