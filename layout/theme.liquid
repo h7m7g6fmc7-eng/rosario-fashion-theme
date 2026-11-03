@@ -16,10 +16,16 @@
     {%- endunless -%}
 
     <title>
-      {%- if page_title == shop.name -%}Rosario Fashion{%- else -%}{{ page_title }}{%- endif -%}
+      {%- liquid
+        assign rf_title = page_title
+        if page_title == shop.name
+          assign rf_title = 'Rosario Fashion'
+        endif
+      -%}
+      {{ rf_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains 'Rosario' %} &ndash; Rosario Fashion{% endunless -%}
+      {%- unless rf_title contains 'Rosario' %} &ndash; Rosario Fashion{% endunless -%}
     </title>
 
     {% if page_description %}
