@@ -265,3 +265,12 @@ a { text-underline-offset: .3rem; }
 
 /* Dawn oculta los div vacíos; los marcadores de foto deben verse */
 .rf-ugc__item:empty, .rf-placeholder:empty, .rf-tile__media:empty, .rf-card__media:empty { display: block; }
+
+/* ---------- Reviews (Judge.me) ---------- */
+.rf-reviews { padding: 7.2rem 0 6.4rem; border-top: 1px solid var(--rf-line); }
+.rf-reviews__body { display: flex; flex-direction: column; gap: 2.4rem; }
+.rf-reviews__hint { margin: 0 auto; max-width: 56rem; padding: 2.4rem; border: 1px dashed var(--rf-chip-line); text-align: center; color: var(--rf-muted); font-size: 1.4rem; }
+.rf-reviews .jdgm-star, .jdgm-star { color: var(--rf-wine) !important; }
+.rf-reviews .jdgm-rev__title, .rf-reviews .jdgm-carousel-title { font-family: var(--rf-display) !important; color: var(--rf-wine) !important; }
+.rf-reviews .jdgm-rev__body, .rf-reviews .jdgm-carousel-item__review { font-family: var(--rf-serif) !important; font-style: italic; font-size: 1.9rem !important; line-height: 1.45; }
+@media screen and (max-width: 749px) { .rf-reviews { padding: 4.8rem 0; } }

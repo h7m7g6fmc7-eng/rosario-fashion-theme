@@ -1,0 +1,40 @@
+{%- comment -%}
+  Rosario Fashion — real customer reviews.
+  Add the Judge.me app block (e.g. "Reviews Carousel" or "Featured Reviews") in the theme editor.
+  With no app block, this section shows nothing to shoppers.
+{%- endcomment -%}
+{%- if section.blocks.size > 0 or request.design_mode -%}
+  <section class="rf-reviews">
+    <div class="rf-section-head">
+      {%- if section.settings.eyebrow != blank -%}<p class="rf-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="rf-h2">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+    </div>
+    <div class="rf-reviews__body page-width">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
+      {%- if section.blocks.size == 0 and request.design_mode -%}
+        <p class="rf-reviews__hint">Add the Judge.me reviews block here (Add block → Apps). Shoppers won't see this section until reviews are connected.</p>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "RF Reviews",
+  "tag": "div",
+  "class": "rf-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Reviews" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What our customers say" }
+  ],
+  "blocks": [
+    { "type": "@app" }
+  ],
+  "presets": [{ "name": "RF Reviews" }]
+}
+{% endschema %}

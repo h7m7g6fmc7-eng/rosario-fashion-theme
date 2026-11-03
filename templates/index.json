@@ -235,6 +235,13 @@
         "text": "First look at new drops, styling notes and private sales.",
         "button_label": "Join"
       }
+    },
+    "reviews": {
+      "type": "rf-reviews",
+      "settings": {
+        "eyebrow": "Reviews",
+        "heading": "What our customers say"
+      }
     }
   },
   "order": [
@@ -244,6 +251,7 @@
     "editorial",
     "feature",
     "benefits",
+    "reviews",
     "ugc",
     "newsletter"
   ]
