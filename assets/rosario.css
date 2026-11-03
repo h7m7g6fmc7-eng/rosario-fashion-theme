@@ -523,3 +523,15 @@ body, .rf-section { background-color: var(--rf-cream); }
 .cart-item__name:hover { color: var(--rf-red); }
 .cart-items thead th { color: var(--rf-black); }
 .title--primary + .underlined-link, .cart__empty-text + .button { color: var(--rf-black); }
+
+/* ==========================================================
+   v4 — sin rojo: las acciones y ofertas pasan a vino;
+   la paleta queda en negro, vino, rosa y crema.
+   ========================================================== */
+:root { --rf-red: #6B1E34; --rf-red-dark: #4A1223; }
+.announcement-bar__link svg, .announcement-bar__message .icon { color: var(--rf-rose); }
+.rf-editorial--black .rf-eyebrow { color: var(--rf-rose); }
+.rf-occasions__grid .rf-tile:nth-child(4n+2) .rf-tile__label { background: var(--rf-cream); color: var(--rf-black); box-shadow: inset 0 0 0 1px var(--rf-line); }
+.rf-newsletter__field input::placeholder { color: var(--rf-rose); }
+.rf-newsletter .rf-btn:hover { color: var(--rf-wine); }
+.rf-promise__card--red { background: var(--rf-cream); color: var(--rf-black); box-shadow: inset 0 0 0 1px var(--rf-line); }
