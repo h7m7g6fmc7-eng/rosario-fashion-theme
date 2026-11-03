@@ -11,7 +11,7 @@
         assign c = block.settings.collection
         assign img = block.settings.image
         if img == blank and c != blank
-          assign img = c.featured_image
+          assign img = c.image
           if img == blank and c.products.size > 0
             for p in c.products limit: 12
               assign style_name = p.title | split: ' ' | first | downcase
