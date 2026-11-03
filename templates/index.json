@@ -186,48 +186,6 @@
         "b4"
       ]
     },
-    "ugc": {
-      "type": "rf-ugc",
-      "settings": {
-        "eyebrow": "@rosariofashion",
-        "heading": "As worn by you"
-      },
-      "blocks": {
-        "b1": {
-          "type": "post",
-          "settings": {}
-        },
-        "b2": {
-          "type": "post",
-          "settings": {}
-        },
-        "b3": {
-          "type": "post",
-          "settings": {}
-        },
-        "b4": {
-          "type": "post",
-          "settings": {}
-        },
-        "b5": {
-          "type": "post",
-          "settings": {}
-        },
-        "b6": {
-          "type": "post",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4",
-        "b5",
-        "b6"
-      ],
-      "disabled": true
-    },
     "newsletter": {
       "type": "rf-newsletter",
       "settings": {
