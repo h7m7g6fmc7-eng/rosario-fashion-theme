@@ -422,7 +422,7 @@ body, .rf-section { background: var(--rf-white); }
    acciones en rojo, marco y texto en negro, vino para el logo.
    ========================================================== */
 :root { --rf-cream: #FFF9F7; --rf-blush: #FBEEF0; --rf-rose: #F6DDE2; }
-body, .rf-section, .gradient { background-color: var(--rf-cream); }
+body, .rf-section { background-color: var(--rf-cream); }
 
 /* Botones: rojo = acción; negro al pasar el mouse */
 .rf-btn { background: var(--rf-red); border-color: var(--rf-red); color: var(--rf-white); }
