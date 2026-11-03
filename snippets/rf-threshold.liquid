@@ -1,0 +1,6 @@
+{%- comment -%} Free-shipping threshold: 100 in the shopper's currency ($100, €100, £100) {%- endcomment -%}
+{%- liquid
+  assign rf_amount = settings.rf_free_shipping_amount | default: 100
+  assign rf_symbol = cart.currency.symbol | default: '$'
+  echo rf_symbol | append: rf_amount
+-%}

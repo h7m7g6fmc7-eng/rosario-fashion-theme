@@ -17,7 +17,7 @@
         "color_scheme": "scheme-4",
         "show_line_separator": false,
         "show_social": false,
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -26,13 +26,21 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "New arrivals every week · Free US shipping over [$XX]",
+            "text": "Free shipping on orders over [FREE_SHIPPING]",
             "link": "shopify://collections/tops"
+          }
+        },
+        "announcement-bar-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Join the Rosario Circle and get 15% off your first order",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement-bar-1"
       ]
     },
     "header": {

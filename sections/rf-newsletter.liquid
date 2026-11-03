@@ -7,7 +7,14 @@
     {%- form 'customer', id: 'RfNewsletter', class: 'rf-newsletter__form' -%}
       <input type="hidden" name="contact[tags]" value="newsletter">
       {%- if form.posted_successfully? -%}
-        <p class="rf-newsletter__ok" role="status">Thanks for joining the Rosario Circle.</p>
+        <div class="rf-newsletter__ok" role="status">
+          <p>Welcome to the Rosario Circle!</p>
+          {%- if section.settings.discount_code != blank -%}
+            <p class="rf-newsletter__code-label">Your 15% off code:</p>
+            <p class="rf-newsletter__code">{{ section.settings.discount_code | escape }}</p>
+            <p class="rf-newsletter__small">Use it at checkout on your first order.</p>
+          {%- endif -%}
+        </div>
       {%- else -%}
         <div class="rf-newsletter__field">
           <label class="visually-hidden" for="RfNewsletterEmail">Email address</label>
@@ -29,9 +36,10 @@
   "class": "rf-section",
   "settings": [
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Rosario Circle" },
-    { "type": "text", "id": "heading", "label": "Heading", "default": "[X]% off your first order" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "15% off your first order" },
     { "type": "text", "id": "text", "label": "Text", "default": "First look at new drops, styling notes and private sales." },
-    { "type": "text", "id": "button_label", "label": "Button label", "default": "Join" }
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Join" },
+    { "type": "text", "id": "discount_code", "label": "Discount code shown after sign-up", "default": "WELCOME15" }
   ],
   "presets": [{ "name": "RF Newsletter" }]
 }

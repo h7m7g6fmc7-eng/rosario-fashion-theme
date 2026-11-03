@@ -556,3 +556,10 @@ body, .rf-section { background-color: var(--rf-cream); }
   .rf-promise__card, .rf-promise__card + .rf-promise__card { border-left: 0; border-top: 1px solid var(--rf-line); padding: 2.4rem 0; }
   .rf-promise__card:first-child { border-top: 0; }
 }
+
+/* v6 — mensaje de bienvenida con código */
+.rf-newsletter__ok { display: flex; flex-direction: column; align-items: center; gap: .6rem; color: var(--rf-white); }
+.rf-newsletter__ok p { margin: 0; }
+.rf-newsletter__code-label { font-family: var(--font-body-family); font-style: normal; font-size: 1.2rem; letter-spacing: .2em; text-transform: uppercase; }
+.rf-newsletter__code { font-family: var(--font-body-family); font-style: normal; font-size: 2.4rem; letter-spacing: .3em; padding: 1rem 2.4rem; border: 1px dashed var(--rf-white); }
+.rf-newsletter__small { font-family: var(--font-body-family); font-style: normal; font-size: 1.3rem; }

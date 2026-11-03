@@ -100,7 +100,8 @@
                       >
                     {%- endif -%}
                     <p class="announcement-bar__message h5">
-                      <span>{{ block.settings.text | escape }}</span>
+                      {%- capture rf_threshold -%}{% render 'rf-threshold' %}{%- endcapture -%}
+                      <span>{{ block.settings.text | escape | replace: '[FREE_SHIPPING]', rf_threshold }}</span>
                       {%- if block.settings.link != blank -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}

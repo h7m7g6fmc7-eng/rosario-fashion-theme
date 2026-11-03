@@ -154,7 +154,7 @@
           "type": "benefit",
           "settings": {
             "title": "Free US shipping",
-            "text": "On orders over [$XX]"
+            "text": "On orders over [FREE_SHIPPING]"
           }
         },
         "b2": {
@@ -190,9 +190,10 @@
       "type": "rf-newsletter",
       "settings": {
         "eyebrow": "The Rosario Circle",
-        "heading": "[X]% off your first order",
-        "text": "First look at new drops, styling notes and private sales.",
-        "button_label": "Join"
+        "heading": "15% off your first order",
+        "text": "Join the Rosario Circle for early access to new drops, styling notes and private sales.",
+        "button_label": "Join",
+        "discount_code": "WELCOME15"
       }
     },
     "reviews": {

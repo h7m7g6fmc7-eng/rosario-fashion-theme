@@ -1466,5 +1466,16 @@
         "label": "t:settings_schema.customer_accounts.settings.customer_account_menu.label"
       }
     ]
+  },
+  {
+    "name": "Rosario Fashion",
+    "settings": [
+      {
+        "type": "number",
+        "id": "rf_free_shipping_amount",
+        "label": "Free shipping from (amount in each market's currency)",
+        "default": 100
+      }
+    ]
   }
 ]
