@@ -677,3 +677,4 @@ body { padding-bottom: 3.6rem; }
 
 /* Portada: el banner 2x1 un poco más compacto bajo la foto completa */
 .template-index .rf-promo__inner { padding-top: 5.6rem; padding-bottom: 5.2rem; }
+.rf-new-in__head > .rf-slider-arrows { flex-direction: row; gap: .8rem; }
