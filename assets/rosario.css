@@ -583,7 +583,6 @@ body, .rf-section { background-color: var(--rf-cream); }
 .rf-bogo-tag { position: absolute; top: 0; left: 0; z-index: 2; padding: .5rem .9rem; background: var(--rf-cream); color: var(--rf-black); font-family: var(--font-body-family); font-size: 1.05rem; letter-spacing: .14em; text-transform: uppercase; line-height: 1.2; pointer-events: none; }
 .card__inner { position: relative; }
 .rf-card__media .rf-badge { top: auto; bottom: 1.2rem; left: 1.2rem; }
-.card .card__badge.top.left, .card .card__badge.top-left { top: auto; bottom: 1rem; }
 @media screen and (max-width: 749px) { .rf-bogo-tag { font-size: .9rem; letter-spacing: .1em; padding: .4rem .6rem; } }
 
 /* Nota en la ficha de producto */
