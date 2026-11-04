@@ -1,0 +1,98 @@
+{%- comment -%}
+  Rosario Fashion — edge-to-edge category mosaic.
+  Each tile: full width or half width, big photo, category name in caps at the bottom left.
+  Photo: the tile's image, else the collection's image, else a product from the collection
+  (never the same style twice on the page).
+{%- endcomment -%}
+<section class="rf-mosaic">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="visually-hidden">{{ section.settings.heading | escape }}</h2>
+  {%- endif -%}
+  <div class="rf-mosaic__grid">
+    {%- assign used_styles = ',' -%}
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign c = block.settings.collection
+        assign img = block.settings.image
+        if img == blank and c != blank
+          assign img = c.image
+        endif
+        if img == blank and c != blank and c.products.size > 0
+          for p in c.products limit: 16
+            assign style_name = p.title | split: ' ' | first | downcase
+            assign key = ',' | append: style_name | append: ','
+            unless used_styles contains key
+              if p.featured_media
+                assign img = p.featured_media.preview_image
+                assign used_styles = used_styles | append: key
+                break
+              endif
+            endunless
+          endfor
+        endif
+        assign label = block.settings.label
+        if label == blank and c != blank
+          assign label = c.title
+        endif
+        assign href = block.settings.link
+        if href == blank and c != blank
+          assign href = c.url
+        endif
+        if href == blank
+          assign href = routes.all_products_collection_url
+        endif
+        assign tile_sizes = '(min-width: 750px) 50vw, 50vw'
+        if block.settings.size == 'full'
+          assign tile_sizes = '100vw'
+        endif
+        assign tile_style = 'object-position: center ' | append: block.settings.focus | append: '%;'
+      -%}
+      <a class="rf-mosaic__tile rf-mosaic__tile--{{ block.settings.size }}" href="{{ href }}" {{ block.shopify_attributes }}>
+        {%- if img != blank -%}
+          {{ img | image_url: width: 1800 | image_tag: loading: 'lazy', sizes: tile_sizes, widths: '540, 720, 900, 1200, 1500, 1800', alt: label, style: tile_style }}
+        {%- else -%}
+          <span class="rf-placeholder" aria-hidden="true"></span>
+        {%- endif -%}
+        <span class="rf-mosaic__label">{{ label | escape }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RF Category mosaic",
+  "tag": "div",
+  "class": "rf-section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading (for screen readers)", "default": "Shop by category" }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tile",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "label", "label": "Label (optional)" },
+        { "type": "image_picker", "id": "image", "label": "Image (optional)" },
+        { "type": "url", "id": "link", "label": "Link (optional)" },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Width",
+          "options": [
+            { "value": "half", "label": "Half" },
+            { "value": "full", "label": "Full" }
+          ],
+          "default": "half"
+        },
+        { "type": "range", "id": "focus", "label": "Image vertical focus", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 25 }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "RF Category mosaic", "blocks": [{ "type": "tile" }, { "type": "tile" }, { "type": "tile" }, { "type": "tile" }] }
+  ]
+}
+{% endschema %}

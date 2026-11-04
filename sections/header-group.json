@@ -41,7 +41,8 @@
       "block_order": [
         "announcement-bar-1",
         "announcement-bar-0"
-      ]
+      ],
+      "disabled": true
     },
     "header": {
       "type": "header",
@@ -49,7 +50,7 @@
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "logo_position": "middle-center",
-        "menu": "main-menu",
+        "menu": "rosario-categories",
         "menu_type_desktop": "drawer",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": false,

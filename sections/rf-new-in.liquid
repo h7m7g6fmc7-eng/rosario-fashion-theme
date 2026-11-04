@@ -1,6 +1,6 @@
 {%- comment -%} Rosario Fashion — edge-to-edge product grid with filter chips {%- endcomment -%}
 {%- assign c = section.settings.collection -%}
-<section class="rf-new-in">
+<section class="rf-new-in rf-new-in--{{ section.settings.layout | default: 'grid' }}" id="RfNewIn-{{ section.id }}">
   <div class="rf-new-in__head page-width">
     <div>
       {%- if section.settings.eyebrow != blank -%}<p class="rf-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
@@ -15,6 +15,16 @@
           </a>
         {%- endfor -%}
       </nav>
+    {%- endif -%}
+    {%- if section.settings.layout == 'slider' -%}
+      <div class="rf-slider-arrows">
+        <button type="button" class="rf-slider-arrow" data-rf-dir="-1" aria-label="Previous products">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+        </button>
+        <button type="button" class="rf-slider-arrow" data-rf-dir="1" aria-label="Next products">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
     {%- endif -%}
   </div>
   <ul class="rf-grid" role="list">
@@ -38,6 +48,21 @@
     </div>
   {%- endif -%}
 </section>
+{%- if section.settings.layout == 'slider' -%}
+  <script>
+    (function () {
+      var root = document.getElementById('RfNewIn-{{ section.id }}');
+      if (!root) return;
+      var list = root.querySelector('.rf-grid');
+      root.querySelectorAll('[data-rf-dir]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var step = list.clientWidth * 0.8 * Number(btn.getAttribute('data-rf-dir'));
+          list.scrollBy({ left: step, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -50,6 +75,16 @@
     { "type": "text", "id": "heading", "label": "Heading", "default": "New In" },
     { "type": "collection", "id": "collection", "label": "Collection" },
     { "type": "range", "id": "products_to_show", "label": "Products to show", "min": 4, "max": 16, "step": 4, "default": 8 },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "slider", "label": "Horizontal slider" }
+      ],
+      "default": "grid"
+    },
     { "type": "text", "id": "view_all_label", "label": "View all label", "default": "View all new in" }
   ],
   "blocks": [

@@ -54,9 +54,39 @@
         "padding_top": 24,
         "padding_bottom": 36
       }
+    },
+    "rf_marquee": {
+      "type": "rf-marquee",
+      "settings": {},
+      "blocks": {
+        "m1": {
+          "type": "message",
+          "settings": {
+            "text": "Buy 1, Get 1 Free · No code needed"
+          }
+        },
+        "m2": {
+          "type": "message",
+          "settings": {
+            "text": "Free shipping on orders over [FREE_SHIPPING]"
+          }
+        },
+        "m3": {
+          "type": "message",
+          "settings": {
+            "text": "New arrivals every week"
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3"
+      ]
     }
   },
   "order": [
-    "footer"
+    "footer",
+    "rf_marquee"
   ]
 }

@@ -22,7 +22,8 @@
         "button_link_2": "shopify://collections/tops",
         "height": "large",
         "placeholder_color": "#E7CBD1"
-      }
+      },
+      "disabled": true
     },
     "occasions": {
       "type": "rf-occasions",
@@ -65,61 +66,19 @@
         "b2",
         "b3",
         "b4"
-      ]
+      ],
+      "disabled": true
     },
     "new_in": {
       "type": "rf-new-in",
       "settings": {
-        "eyebrow": "Just landed",
-        "heading": "New In",
+        "eyebrow": "",
+        "heading": "Latest arrivals for you",
         "collection": "tops",
-        "products_to_show": 8,
-        "view_all_label": "View all new in"
-      },
-      "blocks": {
-        "b1": {
-          "type": "filter",
-          "settings": {
-            "collection": "tops",
-            "label": "All"
-          }
-        },
-        "b2": {
-          "type": "filter",
-          "settings": {
-            "collection": "party-going-out",
-            "label": "Going Out"
-          }
-        },
-        "b3": {
-          "type": "filter",
-          "settings": {
-            "collection": "halter-tops",
-            "label": "Halter"
-          }
-        },
-        "b4": {
-          "type": "filter",
-          "settings": {
-            "collection": "vacation",
-            "label": "Vacation"
-          }
-        },
-        "b5": {
-          "type": "filter",
-          "settings": {
-            "collection": "swimwear",
-            "label": "Swim"
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4",
-        "b5"
-      ]
+        "products_to_show": 16,
+        "view_all_label": "",
+        "layout": "slider"
+      }
     },
     "editorial": {
       "type": "rf-editorial",
@@ -132,7 +91,8 @@
         "button_label": "Shop party",
         "button_link": "shopify://collections/party-going-out",
         "style": "black"
-      }
+      },
+      "disabled": true
     },
     "feature": {
       "type": "rf-split",
@@ -144,7 +104,8 @@
         "button_link": "shopify://collections/accessories",
         "image_1": "shopify://shop_images/rosario-cat-bags.jpg",
         "image_2": "shopify://shop_images/rosario-new-4.jpg"
-      }
+      },
+      "disabled": true
     },
     "benefits": {
       "type": "rf-benefits",
@@ -184,7 +145,8 @@
         "b2",
         "b3",
         "b4"
-      ]
+      ],
+      "disabled": true
     },
     "newsletter": {
       "type": "rf-newsletter",
@@ -261,18 +223,112 @@
         "button_label": "Shop the offer",
         "button_link": "shopify://collections/tops"
       }
+    },
+    "hero_full": {
+      "type": "rf-hero-wordmark",
+      "settings": {
+        "image": "shopify://shop_images/rosario-hero.jpg",
+        "focus": 20,
+        "wordmark": "ROSARIO",
+        "word_color": "#F6DDE2",
+        "label": "NEW IN",
+        "link": "shopify://collections/tops"
+      }
+    },
+    "mosaic": {
+      "type": "rf-mosaic",
+      "settings": {
+        "heading": "Shop by category"
+      },
+      "blocks": {
+        "t1": {
+          "type": "tile",
+          "settings": {
+            "collection": "tops",
+            "label": "NEW IN",
+            "size": "half",
+            "focus": 20
+          }
+        },
+        "t2": {
+          "type": "tile",
+          "settings": {
+            "collection": "party-going-out",
+            "label": "GOING OUT",
+            "size": "half",
+            "focus": 20
+          }
+        },
+        "t3": {
+          "type": "tile",
+          "settings": {
+            "collection": "accessories",
+            "label": "BAGS & ACCESSORIES",
+            "size": "full",
+            "focus": 40,
+            "image": "shopify://shop_images/rosario-editorial.jpg"
+          }
+        },
+        "t4": {
+          "type": "tile",
+          "settings": {
+            "collection": "vacation",
+            "label": "VACATION",
+            "size": "half",
+            "focus": 20
+          }
+        },
+        "t5": {
+          "type": "tile",
+          "settings": {
+            "collection": "halter-tops",
+            "label": "HALTER TOPS",
+            "size": "half",
+            "focus": 20
+          }
+        },
+        "t6": {
+          "type": "tile",
+          "settings": {
+            "collection": "swimwear",
+            "label": "SWIM",
+            "size": "half",
+            "focus": 20
+          }
+        },
+        "t7": {
+          "type": "tile",
+          "settings": {
+            "collection": "lounge-knits-active",
+            "label": "LOUNGE & KNITS",
+            "size": "half",
+            "focus": 20
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ]
     }
   },
   "order": [
+    "hero_full",
     "promo",
+    "mosaic",
+    "new_in",
+    "promise",
+    "reviews",
+    "newsletter",
     "hero",
     "occasions",
-    "new_in",
     "editorial",
     "feature",
-    "benefits",
-    "reviews",
-    "promise",
-    "newsletter"
+    "benefits"
   ]
 }

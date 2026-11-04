@@ -1,0 +1,35 @@
+{%- comment -%} Rosario Fashion — scrolling ticker fixed to the bottom of the screen {%- endcomment -%}
+{%- capture rf_threshold -%}{% render 'rf-threshold' %}{%- endcapture -%}
+{%- capture rf_items -%}
+  {%- for block in section.blocks -%}
+    <span class="rf-marquee__item" {{ block.shopify_attributes }}>{{ block.settings.text | escape | replace: '[FREE_SHIPPING]', rf_threshold }}</span>
+    <span class="rf-marquee__dot" aria-hidden="true">·</span>
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if section.blocks.size > 0 -%}
+  <div class="rf-marquee" role="region" aria-label="Store news">
+    <div class="rf-marquee__track">
+      <div class="rf-marquee__group">{{ rf_items }}{{ rf_items }}</div>
+      <div class="rf-marquee__group" aria-hidden="true">{{ rf_items }}{{ rf_items }}</div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "RF Bottom ticker",
+  "tag": "div",
+  "class": "rf-marquee-section",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Free shipping on orders over [FREE_SHIPPING]" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "RF Bottom ticker", "blocks": [{ "type": "message" }] }]
+}
+{% endschema %}
