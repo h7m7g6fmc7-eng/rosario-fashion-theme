@@ -1475,6 +1475,24 @@
         "id": "rf_free_shipping_amount",
         "label": "Free shipping from (amount in each market's currency)",
         "default": 100
+      },
+      {
+        "type": "checkbox",
+        "id": "rf_bogo_enabled",
+        "label": "Show Buy 1 Get 1 Free tags",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "rf_bogo_label",
+        "label": "Promo tag text",
+        "default": "Buy 1 Get 1 Free"
+      },
+      {
+        "type": "text",
+        "id": "rf_bogo_collections",
+        "label": "Promo collections (handles, comma separated)",
+        "default": "tops,swimwear,dresses-sets-bottoms,lounge-knits-active,accessories"
       }
     ]
   }

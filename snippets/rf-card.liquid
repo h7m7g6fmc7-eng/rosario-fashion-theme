@@ -25,6 +25,7 @@
 -%}
 <a class="rf-card" href="{{ product.url }}">
   <div class="rf-card__media">
+    {% render 'rf-bogo-tag', product: product %}
     {%- if product.featured_media -%}
       {{ product.featured_media.preview_image | image_url: width: 900 | image_tag: class: 'rf-card__img', loading: 'lazy', sizes: sizes, widths: '360, 540, 720, 900', alt: card_alt }}
       {%- if second and second.media_type == 'image' -%}

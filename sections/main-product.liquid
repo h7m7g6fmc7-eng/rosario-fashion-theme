@@ -115,6 +115,12 @@
                       price_class: 'price--large'
                     -%}
                   </div>
+                  {%- if settings.rf_bogo_enabled -%}
+                    {%- capture rf_tag -%}{% render 'rf-bogo-tag', product: product %}{%- endcapture -%}
+                    {%- if rf_tag != blank -%}
+                      <p class="rf-bogo-note">{{ rf_tag }}<span>Add 2 pieces to your bag. One is free at checkout.</span></p>
+                    {%- endif -%}
+                  {%- endif -%}
                   {%- if product.quantity_price_breaks_configured? -%}
                     <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                       <span>{{ 'products.product.volume_pricing.note' | t }}</span>

@@ -200,7 +200,10 @@
           }
         }
       },
-      "rf_free_shipping_amount": 100
+      "rf_free_shipping_amount": 100,
+      "rf_bogo_enabled": true,
+      "rf_bogo_label": "Buy 1 Get 1 Free",
+      "rf_bogo_collections": "tops,swimwear,dresses-sets-bottoms,lounge-knits-active,accessories"
     }
   }
 }

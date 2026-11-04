@@ -563,3 +563,29 @@ body, .rf-section { background-color: var(--rf-cream); }
 .rf-newsletter__code-label { font-family: var(--font-body-family); font-style: normal; font-size: 1.2rem; letter-spacing: .2em; text-transform: uppercase; }
 .rf-newsletter__code { font-family: var(--font-body-family); font-style: normal; font-size: 2.4rem; letter-spacing: .3em; padding: 1rem 2.4rem; border: 1px dashed var(--rf-white); }
 .rf-newsletter__small { font-family: var(--font-body-family); font-style: normal; font-size: 1.3rem; }
+
+/* v7 — Buy 1 Get 1 Free: banner y etiquetas */
+.rf-promo { background: var(--rf-rose); }
+.rf-promo__inner { max-width: 110rem; margin: 0 auto; padding: 6.4rem 2rem 6rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.6rem; }
+.rf-promo__eyebrow { margin: 0; font-family: var(--rf-serif); font-style: italic; font-size: clamp(2.2rem, 2.4vw, 3rem); color: var(--rf-black); }
+.rf-promo__title { margin: 0; font-family: var(--rf-display); font-weight: 400; font-size: clamp(5.2rem, 9vw, 12rem); line-height: .98; letter-spacing: .01em; color: var(--rf-black); text-transform: uppercase; }
+.rf-promo__title-b { font-family: var(--rf-serif); font-style: italic; text-transform: none; color: var(--rf-wine); border-bottom: 2px solid var(--rf-wine); padding: 0 .1em; }
+.rf-promo__text { margin: .8rem 0 0; font-size: clamp(1.7rem, 1.8vw, 2.2rem); line-height: 1.5; color: var(--rf-black); }
+.rf-promo__note { margin: 0; font-size: 1.2rem; letter-spacing: .3em; text-transform: uppercase; color: var(--rf-wine); }
+.rf-promo .rf-btn { margin-top: 1.2rem; }
+@media screen and (max-width: 749px) {
+  .rf-promo__inner { padding: 4rem 1.6rem 4rem; gap: 1.2rem; }
+  .rf-promo__title-b { display: inline-block; margin-top: .4rem; }
+  .rf-promo .rf-btn { width: 100%; }
+}
+
+/* Etiqueta pequeña arriba de cada prenda */
+.rf-bogo-tag { position: absolute; top: 0; left: 0; z-index: 2; padding: .5rem .9rem; background: var(--rf-cream); color: var(--rf-black); font-family: var(--font-body-family); font-size: 1.05rem; letter-spacing: .14em; text-transform: uppercase; line-height: 1.2; pointer-events: none; }
+.card__inner { position: relative; }
+.rf-card__media .rf-badge { top: auto; bottom: 1.2rem; left: 1.2rem; }
+.card .card__badge.top.left, .card .card__badge.top-left { top: auto; bottom: 1rem; }
+@media screen and (max-width: 749px) { .rf-bogo-tag { font-size: .9rem; letter-spacing: .1em; padding: .4rem .6rem; } }
+
+/* Nota en la ficha de producto */
+.rf-bogo-note { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin: 1.2rem 0 0; font-size: 1.4rem; color: var(--rf-black); }
+.rf-bogo-note .rf-bogo-tag { position: static; background: var(--rf-rose); }

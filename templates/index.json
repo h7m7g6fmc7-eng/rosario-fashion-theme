@@ -190,10 +190,10 @@
       "type": "rf-newsletter",
       "settings": {
         "eyebrow": "The Rosario Circle",
-        "heading": "15% off your first order",
-        "text": "Join the Rosario Circle for early access to new drops, styling notes and private sales.",
+        "heading": "Join the Rosario Circle",
+        "text": "Early access to new drops, styling notes and private sales.",
         "button_label": "Join",
-        "discount_code": "WELCOME15"
+        "discount_code": ""
       }
     },
     "reviews": {
@@ -249,9 +249,22 @@
         "p3",
         "p4"
       ]
+    },
+    "promo": {
+      "type": "rf-promo",
+      "settings": {
+        "eyebrow": "Early Black Friday",
+        "title_1": "Buy 1,",
+        "title_2": "Get 1 Free",
+        "text": "Add 2 pieces to your bag. One is free at checkout.",
+        "note": "No code needed",
+        "button_label": "Shop the offer",
+        "button_link": "shopify://collections/tops"
+      }
     }
   },
   "order": [
+    "promo",
     "hero",
     "occasions",
     "new_in",

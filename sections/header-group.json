@@ -33,14 +33,14 @@
         "announcement-bar-1": {
           "type": "announcement",
           "settings": {
-            "text": "Join the Rosario Circle and get 15% off your first order",
-            "link": ""
+            "text": "Buy 1, Get 1 Free · No code needed",
+            "link": "shopify://collections/tops"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement-bar-1"
+        "announcement-bar-1",
+        "announcement-bar-0"
       ]
     },
     "header": {

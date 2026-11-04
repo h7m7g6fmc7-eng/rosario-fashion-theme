@@ -1,0 +1,33 @@
+{%- comment -%} Rosario Fashion — promo banner (e.g. Buy 1 Get 1 Free) {%- endcomment -%}
+<section class="rf-promo">
+  <div class="rf-promo__inner">
+    {%- if section.settings.eyebrow != blank -%}<p class="rf-promo__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h2 class="rf-promo__title">
+      {%- if section.settings.title_1 != blank -%}<span class="rf-promo__title-a">{{ section.settings.title_1 | escape }}</span>{%- endif -%}
+      {%- if section.settings.title_2 != blank -%} <span class="rf-promo__title-b">{{ section.settings.title_2 | escape }}</span>{%- endif -%}
+    </h2>
+    {%- if section.settings.text != blank -%}<p class="rf-promo__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+    {%- if section.settings.note != blank -%}<p class="rf-promo__note">{{ section.settings.note | escape }}</p>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a class="rf-btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RF Promo banner",
+  "tag": "div",
+  "class": "rf-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Early Black Friday" },
+    { "type": "text", "id": "title_1", "label": "Title (part 1)", "default": "Buy 1," },
+    { "type": "text", "id": "title_2", "label": "Title (part 2, italic)", "default": "Get 1 Free" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Add 2 pieces to your bag. One is free at checkout." },
+    { "type": "text", "id": "note", "label": "Small note", "default": "No code needed" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop the offer" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "RF Promo banner" }]
+}
+{% endschema %}

@@ -1,0 +1,20 @@
+{%- comment -%}
+  Small "Buy 1 Get 1 Free" tag on product cards.
+  Shows only when the promo is on and the product is in one of the promo collections.
+  Accepts: product
+{%- endcomment -%}
+{%- if settings.rf_bogo_enabled and product -%}
+  {%- liquid
+    assign promo_handles = settings.rf_bogo_collections | default: 'tops,swimwear,dresses-sets-bottoms,lounge-knits-active,accessories' | remove: ' ' | split: ','
+    assign in_promo = false
+    for c in product.collections
+      if promo_handles contains c.handle
+        assign in_promo = true
+        break
+      endif
+    endfor
+  -%}
+  {%- if in_promo -%}
+    <span class="rf-bogo-tag{% if class %} {{ class }}{% endif %}">{{ settings.rf_bogo_label | default: 'Buy 1 Get 1 Free' | escape }}</span>
+  {%- endif -%}
+{%- endif -%}
