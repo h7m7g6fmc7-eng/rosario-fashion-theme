@@ -3,25 +3,11 @@
     "announcement_hero": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Effortless Elegance",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "The new season edit — timeless pieces made to be lived in.",
-            "text_style": "subtitle"
-          }
-        },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop New Arrivals",
-            "button_link_1": "shopify://collections/tops",
+            "button_label_1": "Shop the Collection",
+            "button_link_1": "shopify://collections/the-rosario-edit",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -30,13 +16,11 @@
         }
       },
       "block_order": [
-        "heading",
-        "text",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 30,
-        "image_height": "large",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "image_behavior": "none",
@@ -44,7 +28,9 @@
         "color_scheme": "scheme-3",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true,
+        "image": "shopify://shop_images/rosario-hero-desktop.jpg",
+        "image_mobile": "shopify://shop_images/rosario-hero-mobile.jpg"
       }
     },
     "intro": {
