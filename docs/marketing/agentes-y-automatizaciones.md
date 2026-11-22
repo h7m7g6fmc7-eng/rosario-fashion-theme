@@ -22,14 +22,14 @@ sin el "sí" de la dueña, salvo lo que se indica como **autorizado**.
 Esas automatizaciones solo se pueden editar desde su conversación de origen.
 Límite global de gasto aprobado el 22/11: **$165/día** (antes $50). Pendiente que esa conversación lo confirme.
 
-## Campañas activas en Meta (cuenta 3626009467662425)
-| Campaña | ID | $/día |
-|---|---|---|
-| RF \| US \| Ventas \| BF2026 \| Bolsos + Vestidos (A $15, B $20, C $15) | 120250884421520381 | $50 |
-| Rosario black fradey | 120250810977660381 | $40 |
-| RF \| US \| Ventas \| Bolsos - Regalo Navidad | 120250852758850381 | $50 |
-| RF \| US \| Prueba Creativos | 120250854042960381 | $25 |
-| **Total activo (22/11, tras pausar 3)** | | **$50** |
+## Campañas en Meta (cuenta 3626009467662425), al 22/11
+| Campaña | ID | $/día | Estado |
+|---|---|---|---|
+| RF \| US \| Ventas \| BF2026 \| Bolsos + Vestidos (A $15, B $20, C $15; B termina el 28/11) | 120250884421520381 | $50 | ACTIVA — se revisa el 24/11 7 am: si no hay compras, se pausa |
+| Rosario black fradey | 120250810977660381 | $40 | PAUSADA 22/11 (sin compras ni carritos) |
+| RF \| US \| Ventas \| Bolsos - Regalo Navidad | 120250852758850381 | $50 | PAUSADA 22/11 (sin compras ni carritos) |
+| RF \| US \| Prueba Creativos | 120250854042960381 | $25 | PAUSADA 22/11 (sin compras ni carritos) |
+| **Gasto diario activo** | | **$50** | |
 
 ## Creativos
 Desde el 22/11 los creativos nuevos se guardan en **Shopify → Contenido → Archivos** (ya no en Dropbox).
