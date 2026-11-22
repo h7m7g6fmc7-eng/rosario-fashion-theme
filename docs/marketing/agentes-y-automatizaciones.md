@@ -29,7 +29,7 @@ Límite global de gasto aprobado el 22/11: **$165/día** (antes $50). Pendiente 
 | Rosario black fradey | 120250810977660381 | $40 |
 | RF \| US \| Ventas \| Bolsos - Regalo Navidad | 120250852758850381 | $50 |
 | RF \| US \| Prueba Creativos | 120250854042960381 | $25 |
-| **Total** | | **$165** |
+| **Total activo (22/11, tras pausar 3)** | | **$50** |
 
 ## Creativos
 Desde el 22/11 los creativos nuevos se guardan en **Shopify → Contenido → Archivos** (ya no en Dropbox).
