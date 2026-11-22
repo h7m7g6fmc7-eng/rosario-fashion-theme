@@ -1,6 +1,6 @@
 # Diseño de la web — "Rodeo de noche navideña"
 
-Copia del archivo DESIGN.md que vive en el tema en vivo (189884137571). Si se cambia allá, se actualiza aquí.
+Copia del archivo DESIGN.md que vive en el tema "Rodeo de noche" (189925916771). Si se cambia allá, se actualiza aquí.
 
 ## Idea
 Elegancia ecuestre de noche: carbón, calidez de vino y una estrella vaquera que también es la estrella de Navidad.

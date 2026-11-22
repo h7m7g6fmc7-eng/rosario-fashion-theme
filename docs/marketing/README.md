@@ -14,8 +14,9 @@ Meta de negocio: llegar a **$1,000 al día** en ventas online.
 ## La tienda en Shopify
 | Qué | Dónde |
 |---|---|
-| Tema en vivo | "Rosario Fashion — Portada tienda (estilo JW PEI)" (189884137571) |
-| Vista previa del rediseño | https://02rf4v-cq.myshopify.com/?preview_theme_id=189884137571 |
+| Tema nuevo (rediseño, listo para publicar) | "Rosario Fashion — Rodeo de noche (listo para publicar)" (189925916771) |
+| Vista previa del rediseño | https://02rf4v-cq.myshopify.com/?preview_theme_id=189925916771 |
+| Tema en vivo hasta que se publique el nuevo | "Rosario Fashion — Portada tienda (estilo JW PEI)" (189884137571) |
 | Página para anuncios | /pages/holiday-rodeo (oculta hasta aprobación) |
 | Tema borrador viejo (no usar) | "Rosario Fashion — Black Friday (borrador)" (189868179555) |
 | Creativos (fotos y videos) | Shopify → Contenido → Archivos |
